@@ -1,0 +1,137 @@
+
+  @media (max-width: 930px) {
+
+
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+     background-color:#E6E6FA;
+
+    }
+  
+    header {
+      display: flex;
+      flex-direction: column; /* Coloca logo e navegação em coluna */
+      align-items: center;
+      padding: 10px 5px;
+      background-color:#E6E6FA;
+      border-bottom: 1px solid #ddd;
+      width: 108%;
+    }
+  
+    .logo img {
+      width: 100px; /* Define a largura da imagem para 100px */
+      height: auto; /* Mantém a proporção da altura automaticamente */
+    }
+    
+
+    .navegacao{
+      margin-right: 29px; /* itens para esquerda */
+    }
+  
+    .navegacao ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none; /* Remove os marcadores padrão */
+      padding: 0;
+      margin: 0;
+      gap: 20px; /* Espaço de 20px entre os itens */
+    }
+    
+    .navegacao a {
+      text-decoration: none;
+      color: black;
+      font-size: 18px; /* Aumenta a legibilidade */
+    }
+  
+    .star {
+      font-size: 18px;
+      text-align: center;
+      margin: 15px 0;
+      font-weight: bold;
+    }
+  
+    #produtos {
+      display: grid;
+      grid-template-columns: 1fr; /* Apenas uma coluna para blocos */
+      gap: 15px; /* Espaço entre os itens */
+      padding: 10px;
+      
+    }
+  
+/* Reduz ainda mais o tamanho dos blocos */
+.produto {
+    width: 100px; /* Largura menor */
+    height: 150px; /* Altura fixa para limitar o tamanho */
+    background-color: white;
+    padding: 18px; /* Espaçamento interno reduzido */
+    border-radius: 20px; /* Bordas arredondadas leves */
+    text-align: center;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra discreta */
+
+    overflow: hidden; /* Garante que o conteúdo não extrapole os limites */
+  }
+  
+  /* Ajusta imagens para caber nos blocos menores */
+  .produto img {
+    width: 60px; /* Largura ainda menor */
+    height: 60px; /* Altura fixa para criar uniformidade */
+    margin-bottom: 5px; /* Espaçamento inferior */
+    object-fit: cover; /* Garante que as imagens preencham o espaço sem deformar */
+  }
+  
+  /* Ajusta o título dos produtos */
+  .produto h2 {
+    font-size: 14px; /* Texto menor para os títulos */
+    margin: 5px 0; /* Reduz espaço vertical */
+    line-height: 1.2; /* Ajusta a altura das linhas */
+  }
+  
+  /* Ajusta a descrição dos produtos */
+  .produto p {
+    font-size: 10px; /* Tamanho menor para descrições */
+    margin: 3px 0; /* Espaçamento menor */
+    line-height: 1.2; /* Altura de linha compacta */
+  }
+  
+  /* Ajusta os botões */
+  .produto button {
+    font-size: 10px; /* Tamanho reduzido */
+    padding: 4px 8px; /* Botão mais compacto */
+    border-radius: 80px; /* Bordas levemente arredondadas */
+    background-color:#6e6ea8;; /* Cor consistente */
+    cursor: pointer;
+    color:white;
+  }
+  
+  .produto button:hover {
+    background-color: #aaa; /* Ajuste de cor ao passar o mouse */
+   
+  }
+  
+  /* Ajusta a grade de produtos */
+  #produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Exibe 3 produtos por linha */
+    gap: 8px; /* Espaçamento menor entre os produtos */
+    margin: 10px auto; /* Ajusta espaço em volta da grade */
+    padding: 10px;
+  }
+
+
+
+
+}
+
+.navegacao :hover{
+
+    cursor: pointer;
+
+}
+
+.bntp{
+
+  font-size: 90px;
+}

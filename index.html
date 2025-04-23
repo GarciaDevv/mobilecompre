@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="OIG3-removebg-preview.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mobile.css" media="only screen and (max-width: 768px)">
+
+  
+  <!-- Fontes e scripts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Nosifer&family=Prata&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira+Condensed:wght@100&display=swap" rel="stylesheet">
+  <script src="script.js"></script>
+
+
+
+  <title>Compre Easy</title>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <a href="#" class="logo">
+      <img src="OIG3-removebg-preview.png" alt="Compre Easy">
+    </a>
+
+    <!-- Navegação -->
+    <nav class="navegacao">
+      <ul>
+        <li id="icone-carrinho">
+          <a href="carrinho.html">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOJJREFUSEvNlMsNwjAQRF86gU6gE7hCEUARcAUqgU6gE/AgW8rX3jgYsadIdubt7McVhaMqrM9PAS/v5glc3ff+G+7qDgIg6C6B+1RIX4lWwNmLCzIp+gAz4OFVJ7sYarIcyEluqI9z/TwEqLvIgSQBEr25Pixy1F3ihzCFsT0Izc5hqDxyEV203DJdgHXIKrXJWrbdSAsSF+QTKUCOi4ZmCjC22Y3yWBzojiZJE2WJzmJaHEjY0gu9W52nxQqwZN97xwo4AhvgBGxbSrGz5BQFrfpT3k4qdmYGFHdQvAf/C3gDp+smGX2YUKEAAAAASUVORK5CYII="/>
+          </a>
+        </li>
+        <li><a href="frios.html" class="bntp">Frios</a></li>
+        <li><a href="Frutas.html" class="bntp">Frutas</a></li>
+        <li><a href="Padaria.html" class="bntp">Padaria</a></li>
+        <li><a href="carnes.html" class="bntp">Carnes</a></li>
+      </ul>
+      
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main> 
+
+
+    <div class="star">Destaques</div>
+
+    <div id="produtos">
+        <!-- Produto: Banana -->
+        <div class="produto">
+            <h2><img src="OIG3-removebg-preview.png" alt="Banana">Banana/Prata - 7.00 R$/Kg</h2>
+            <p><br>Banana Prata.</p>
+            <button onclick="Comprar('Banana Prata', 7.00)">Comprar</button>
+        </div>
+
+        <!-- Produto: Maçã -->
+        <div class="produto">
+            <h2><img src="OIG3-removebg-preview.png" alt="Maçã">Maçã/Gala - 6,99R$/Kg</h2>
+            <p>Maçã Gala Fresquinha.</p>
+            <button onclick="Comprar('Maçã', 4.50)">Comprar</button>
+        </div>
+
+        <!-- Produto: Morango -->
+        <div class="produto">
+            <h2><img src="OIG3-removebg-preview.png" alt="Morango"> Morango - 4.50 R$/Cx</h2>
+            <p><br>Uva Suavignon 500G.</p>
+            <button onclick="Comprar('Morango', 4.50)">Comprar</button>
+        </div>
+
+        <!-- Produto: Arroz Cristal -->
+        <div class="produto">
+            <h2><img src="OIG3-removebg-preview.png" alt="Arroz Cristal"> Arroz/Cristal - R$28.00/5kg</h2>
+            <p><br>Arroz Integral 5Kg.</p>
+            <button onclick="Comprar('Arroz Cristal', 28.00)">Comprar</button>
+        </div>
+
+        <!-- Produto: Feijão Cristal -->
+        <div class="produto">
+            <h2><img src="OIG3-removebg-preview.png" alt="Feijão Cristal"> Feijão Cristal - R$ 7.50/kg</h2>
+            <p><br>Feijão</p>
+            <button onclick="Comprar('Feijão Cristal', 7.50)">Comprar</button>
+        </div>
+
+        <div class="produto">
+          <h2><img src="OIG3-removebg-preview.png" alt="">Tomate - R$ 4.00/kg</h2>
+          <p><br>Tomates</p>
+          <button onclick="Comprar('Tomate', 4.00)">Comprar</button>
+      </div>
+      
+         
+      <div class="produto">
+        <h2><img src="OIG3-removebg-preview.png" alt="">Extra/Power 1L - R$ 10.00</h2>
+        <p>Extra power.</p>
+        <button onclick="Comprar('Extra Power 1L', 10.00)">Comprar</button>
+    </div>
+    
+    
+    <div class="produto">
+        <h2><img src="OIG3-removebg-preview.png" alt="">Leite/Tirol - R$ 4.50/L</h2>
+        <p>Leite Tirol 1l .</p>
+        <button onclick="Comprar('Leite Integral', 4.50)">Comprar</button>
+    </div>
+    
+    
+    <div class="produto">
+        <h2><img src="OIG3-removebg-preview.png" alt="">Toddy/500g R$ 7.45</h2>
+        <p>T</p>
+        <button onclick="Comprar('Toddy', 7.45)">Comprar</button>
+    </div>
+    
+    
+    
+    
+    <div class="produto">
+      <h2><img src="OIG3-removebg-preview.png" alt="">Macarrão/Cristal - R$ 6,98/Un</h2>
+      <p>Macarrão</p>
+      <button onclick="Comprar('Macarrão Cristal', 6.98)">Comprar</button>
+    </div>
+    
+    
+    <div class="produto">
+      <h2><img src="OIG3-removebg-preview.png" alt="">Carne/Costelinha - R$ 25.00/kg</h2>
+      <p>Costelinha Suína .</p>
+      <button onclick="Comprar('Carne Costelinha', 25.00)">Comprar</button>
+    </div>
+    
+    
+    <div class="produto">
+      <h2><img src="OIG3-removebg-preview.png" alt="">Cerveja Brahma - R$ 4.00/Un</h2>
+      <p>Cerveja 269ml.</p>
+      <button onclick="Comprar('Cerveja Brahma', 4.00)">Comprar</button>
+    </div>
+    
+    <div class="produto">
+      <h2><img src="OIG3-removebg-preview.png" alt="">Nescau/Ori - R$ 11.50/unidade</h2>
+      <button onclick="Comprar('Nescau', 11.50)">Comprar</button>
+    
+    
+    </div>
+    
+    <div class="produto">
+      <h2><img src="OIG3-removebg-preview.png" alt="">Presunto Seara - R$ 8.50</h2>
+      <p>Presunto Fresco 400g</p>
+      <button onclick="Comprar('Presunto', 8.50)">Comprar</button>
+    
+    </div>
+
+
+
+
+
+
+
+
+
+    </div>
+  </main>
+  
+</body>
+</html>
