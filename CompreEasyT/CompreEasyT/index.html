@@ -18,7 +18,7 @@
 
 
 
- 
+  <script src="script.js"></script>
   <link rel="manifest" href="manifest.json">
 
   <title>Compre Easy</title>
@@ -28,8 +28,8 @@
 
   <!-- Cabeçalho -->
   <header>
-    <a href="index.html" class="logo">
-      <img src="OIG3-removebg-preview.png" alt="Compre Easy">
+    <a href="#" class="logo">
+      <img src="img-gpt-icon-2-removebg-preview.png" alt="Compre Easy"> 
     </a>
 
     <!-- Navegação -->
@@ -37,22 +37,23 @@
       <ul>
         <li id="icone-carrinho">
           <a href="carrinho.html">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOJJREFUSEvNlMsNwjAQRF86gU6gE7hCEUARcAUqgU6gE/AgW8rX3jgYsadIdubt7McVhaMqrM9PAS/v5glc3ff+G+7qDgIg6C6B+1RIX4lWwNmLCzIp+gAz4OFVJ7sYarIcyEluqI9z/TwEqLvIgSQBEr25Pixy1F3ihzCFsT0Izc5hqDxyEV203DJdgHXIKrXJWrbdSAsSF+QTKUCOi4ZmCjC22Y3yWBzojiZJE2WJzmJaHEjY0gu9W52nxQqwZN97xwo4AhvgBGxbSrGz5BQFrfpT3k4qdmYGFHdQvAf/C3gDp+smGX2YUKEAAAAASUVORK5CYII="/>
+            <img src="shopping-cart.png" class="icone-carrinho-img" />
           </a>
         </li>
+        <li><a href="frios.html" class="bntp">Frios</a></li>
         <li><a href="Frutas.html" class="bntp">Frutas</a></li>
         <li><a href="Padaria.html" class="bntp">Padaria</a></li>
         <li><a href="carnes.html" class="bntp">Carnes</a></li>
-        <li><button id="btnVoltar1" class="bntp">Voltar</button></li>
       </ul>
+      
     </nav>
-    
   </header>
 
+  <!-- Conteúdo Principal -->
   <main> 
 
 
-    <div class="star">Frutas</div>
+    <div class="star">Destaques</div>
 
     <div id="produtos">
         <!-- Produto: Banana -->
@@ -95,7 +96,75 @@
           <p><br>Tomates</p>
           <button onclick="Comprar('Tomate', 4.00)">Comprar</button>
       </div>
-   
+      
+         
+      <div class="produto">
+        <h2><img src="OIG3-removebg-preview.png" alt="">Extra/Power 1L - R$ 10.00</h2>
+        <p>Extra power.</p>
+        <button onclick="Comprar('Extra Power 1L', 10.00)">Comprar</button>
+    </div>
+    
+    
+    <div class="produto">
+        <h2><img src="OIG3-removebg-preview.png" alt="">Leite/Tirol - R$ 4.50/L</h2>
+        <p>Leite Tirol 1l .</p>
+        <button onclick="Comprar('Leite Integral', 4.50)">Comprar</button>
+    </div>
+    
+    
+    <div class="produto">
+        <h2><img src="OIG3-removebg-preview.png" alt="">Toddy/500g R$ 7.45</h2>
+        <p>T</p>
+        <button onclick="Comprar('Toddy', 7.45)">Comprar</button>
+    </div>
+    
+    
+    
+    
+    <div class="produto">
+      <h2><img src="OIG3-removebg-preview.png" alt="">Macarrão/Cristal - R$ 6,98/Un</h2>
+      <p>Macarrão</p>
+      <button onclick="Comprar('Macarrão Cristal', 6.98)">Comprar</button>
+    </div>
+    
+    
+    <div class="produto">
+      <h2><img src="OIG3-removebg-preview.png" alt="">Carne/Costelinha - R$ 25.00/kg</h2>
+      <p>Costelinha Suína .</p>
+      <button onclick="Comprar('Carne Costelinha', 25.00)">Comprar</button>
+    </div>
+    
+    
+    <div class="produto">
+      <h2><img src="OIG3-removebg-preview.png" alt="">Cerveja Brahma - R$ 4.00/Un</h2>
+      <p>Cerveja 269ml.</p>
+      <button onclick="Comprar('Cerveja Brahma', 4.00)">Comprar</button>
+    </div>
+    
+    <div class="produto">
+      <h2><img src="OIG3-removebg-preview.png" alt="">Nescau/Ori - R$ 11.50/unidade</h2>
+      <button onclick="Comprar('Nescau', 11.50)">Comprar</button>
+    
+    
+    </div>
+    
+    <div class="produto">
+      <h2><img src="OIG3-removebg-preview.png" alt="">Presunto Seara - R$ 8.50</h2>
+      <p>Presunto Fresco 400g</p>
+      <button onclick="Comprar('Presunto', 8.50)">Comprar</button>
+    
+    </div>
+
+
+
+
+
+
+
+
+
+    </div>
+  </main>
+  
 </body>
-<script src="script.js"></script>
 </html>
