@@ -15,20 +15,17 @@ function calcularTotal() {
     for (let item of carrinho) {
         total += item.preco * item.quantidade;
     }
-    return total.toFixed(2);                                                                                                                           /* converte o valor total em ponto flutuante*/
+    return total.toFixed(2); // converte o valor total em ponto flutuante
 }
-
-
-
 
 function exibirCarrinho() {
     let divCarrinho = document.getElementById('carrinho');
     divCarrinho.innerHTML = '';
 
-                                                                                                                                                                  /* editar como aparece no carrinho*/
+    // editar como aparece no carrinho
     let mapeamentoTexto = {
         'Maçã': 'Pct. Preço Por Pct',
-        'Banana prata': 'Dz. Preço Por Kg',
+        'Banana Prata': 'Dz. Preço Por Dz:',
         'Arroz Integral': 'Pacote 5Kg',
         'Carne costelinha suína': 'Kg',
         'Morango': 'Cxs. Preço Por Caixa',
@@ -50,51 +47,41 @@ function exibirCarrinho() {
         'Coxas de Frango': 'Un. Preço Por Kg',
         'Filé Mignon': 'Un. Preço Por Kg',
         'Almondegas': 'Un. Preço Por Kg',
-
-
-       
-        
-        
-       
     };
-
-    
-
-// Função para voltar à página anterior
-function voltar() {
-    window.history.back();
-  }
-  
-  // Seleciona o botão pelo ID e adiciona o evento de clique
-  const btnVoltar = document.getElementById('btnVoltar');
-  if (btnVoltar) {
-    btnVoltar.addEventListener('click', voltar);
-  } else {
-    console.error("Botão com ID 'btnVoltar' não encontrado.");
-  }
 
     for (let item of carrinho) {
         let p = document.createElement('p');
-        p.className = 'texto-carrinho';  
+        p.className = 'texto-carrinho';
 
-        
-        let textoItem = mapeamentoTexto[item.nome] || ''
+        let textoItem = mapeamentoTexto[item.nome] || '';
 
-        p.textContent = `${item.nome}: ${item.quantidade} ${textoItem} ${item.preco} R$ .`;
+        // Verifica e ajusta pluralização
+        if (item.quantidade > 1) {
+            if (textoItem.includes('Pct.')) {
+                textoItem = textoItem.replace('Pct.', 'Pcts.');
+            }
+            if (textoItem.includes('Dz.')) {
+                textoItem = textoItem.replace('Dz.', 'Dzs.');
+            }
+        }
+
+        // Calcula o total por item
+        let totalPorItem = (item.preco * item.quantidade).toFixed(2);
+
+        // Define o texto para exibição
+        p.textContent = `${item.nome}: ${item.quantidade} ${textoItem} | Preço Unitário: ${item.preco} R$ | Total: ${totalPorItem} R$`;
         divCarrinho.appendChild(p);
     }
-    divCarrinho.innerHTML += '<br>'
+
+    divCarrinho.innerHTML += '<br>';
 
     let pTotal = document.createElement('p');
-    pTotal.className = 'texto-carrinho';  
-    pTotal.textContent =  `Total Da Compra: ${calcularTotal()} R$`;
+    pTotal.className = 'texto-carrinho';
+    pTotal.textContent = `Total Da Compra: ${calcularTotal()} R$`;
     divCarrinho.appendChild(pTotal);
 }
 
-
-
-                                                                                                                                                                             // botao pra limpar o carrinho// 
-
+// Botão para limpar o carrinho
 function limparCarrinho() {
     carrinho = [];
     localStorage.removeItem('carrinho');
@@ -102,10 +89,29 @@ function limparCarrinho() {
 }
 
 let btnLimpar = document.getElementById('btnLimpar');
-btnLimpar.addEventListener('click', limparCarrinho);
+if (btnLimpar) {
+    btnLimpar.addEventListener('click', limparCarrinho);
+} else {
+    console.error("Botão com ID 'btnLimpar' não encontrado.");
+}
 
+// Função para voltar à página anterior
+function voltar() {
+    window.history.back();
+}
 
+const btnVoltar1 = document.getElementById('btnVoltar1');
+if (btnVoltar1) {
+    btnVoltar1.addEventListener('click', voltar);
+} else {
+    console.warn("Botão com ID 'btnVoltar1' não encontrado.");
+}
 
-
+const btnVoltar = document.getElementById('btnVoltar');
+if (btnVoltar) {
+    btnVoltar.addEventListener('click', voltar);
+} else {
+    console.warn("Botão com ID 'btnVoltar' não encontrado.");
+}
 
 window.onload = exibirCarrinho;
